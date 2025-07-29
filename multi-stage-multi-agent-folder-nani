@@ -8,7 +8,7 @@ pipeline {
       steps {
         sh '''
           echo 'public class HelloWorld { public static void main(String[] args) { System.out.println("Hello from Java!"); } }' > HelloWorld.java
-          javac Helloworld.java
+          javac HelloWorld.java
           java HelloWorld
         '''
       }
