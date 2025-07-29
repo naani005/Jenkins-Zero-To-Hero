@@ -19,7 +19,7 @@ pipeline {
     }
     stage('mysql') {
       agent {
-        docker { image 'mysql:8.0.38-alpine' }
+        docker { image 'mysql:8.0.38' }
       }
       steps {
         sh 'mysql --version'
