@@ -17,5 +17,13 @@ pipeline {
         sh 'node --version'
       }
     }
+    stage('mysql') {
+      agent {
+        docker { image 'mysql:8-alpine' }
+      }
+      steps {
+        sh 'mysql --version'
+      }
+    }
   }
 }
